@@ -9,7 +9,7 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-    environment: testing # GitHub Environment-wide (repository?) secret or variable
+   # environment: testing # GitHub Environment-wide (repository?) secret or variable
 
     env: # Environemnt variables
       # Job-wide environment variables
