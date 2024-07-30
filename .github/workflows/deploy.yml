@@ -12,8 +12,9 @@ jobs:
     env:
       # Job-wide environment variables
       MONGODB_CLUSTER_ADDRESS: cluster0.lrvocu4.mongodb.net
-      MONGODB_USERNAME: asen
-      MONGODB_PASSWORD: efecK8g6QkglVIpM
+      # Use Actions secrets instead of hardcoding the username and password
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }} # Pass: efecK8g6QkglVIpM
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
