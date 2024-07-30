@@ -9,7 +9,9 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
-    env:
+    environment: testing # GitHub Environment-wide secret or variable
+
+    env: # Environemnt variables
       # Job-wide environment variables
       MONGODB_CLUSTER_ADDRESS: cluster0.lrvocu4.mongodb.net
       # Use Actions secrets instead of hardcoding the username and password
